@@ -1,17 +1,26 @@
-pragma solidity ^0.4.23;
+pragma solidity ^0.4.19;
 
 contract IpfsEmitter {
 
-    address public creator;
+    address public owner;
     
     event FileAdded(bytes32 indexed fileHash);
+    event Failed(address sender);
 
-    function IpfsStore() {
-        creator = msg.sender;
+    function IpfsEmitter() public {
+        owner = msg.sender;
     }
 
     function add(bytes32 hash) public {
-        emit FileAdded(hash);
+        if (msg.sender == owner) {
+            FileAdded(hash);
+        } else {
+            Failed(msg.sender);
+        }
+    }
+
+    function () public payable {
+        revert();
     }
 
 }
