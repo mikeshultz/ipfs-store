@@ -4,5 +4,8 @@
   "description": "Very simple Ethereum smart contract to store anything on IPFS",
   "repository": "https://github.com/mikeshultz/ipfs-store.git",
   "author": "Mike Shultz <mike@mikeshultz.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "multihashes": "^0.4.13"
+  }
 }
