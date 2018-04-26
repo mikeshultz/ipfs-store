@@ -5,7 +5,7 @@ contract IpfsEmitter {
     address public owner;
     
     event FileAdded(bytes32 indexed fileHash);
-    event Failed(address sender);
+    event Failed(address indexed sender);
 
     function IpfsEmitter() public {
         owner = msg.sender;
