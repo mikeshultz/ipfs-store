@@ -1,3 +1,4 @@
 # IPFS Store
 
-A stupidly simple IPFS hash store.  Or a way to coordinate IPFS syncs between nodes.  Whatever it is, you probably don't want it.
+An Ethereum smart contract for the purpose of syncing file pinning across nodes
+using [ethereum-pinner](https://github.com/mikeshultz/ethereum-pinner). 
